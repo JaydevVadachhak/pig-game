@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #fff;
+  background-image: linear-gradient(to right, #085078, #85d8ce);
+}
+
+#layout {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 9px;
+  width: 80vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#layout .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+  transition: all 0.75s;
+}
+
+#layout .player .player-name {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 400;
+  color: #333;
+}
+
+#layout .player .player-score {
+  font-size: 6rem;
+  color: #085078;
+  font-weight: 400;
+}
+
+#layout .player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#layout .player-active .player-name {
+  font-weight: 700;
+}
+
+#layout .player-active .player-score {
+  font-weight: 700;
+}
+
+#layout .player-active .current-score-block {
+  opacity: 1;
+}
+
+#layout .player .current-score-block {
+  background-color: #085078;
+  border-radius: 9px;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+  width: 15vw;
+}
+
+#layout .player .current-score-block .current-score-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+#layout .player .current-score-block .current-score {
+  font-size: 3.5rem;
+}
+
+/* Absolute */
+
+#layout .dice {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 125px;
+  height: 125px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+#layout .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+#layout .btn-new {
+  top: 20%;
+}
+
+#layout .btn-roll {
+  top: 70%;
+}
+
+#layout .btn-hold {
+  top: 80%;
+}
+
+#layout .btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+#layout .btn:focus {
+  outline: none;
+}
+
+/* Winner */
+
+#layout .player-winner {
+  background-color: #2f2f2f;
+}
+
+#layout .player-winner .player-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#layout .player-winner .player-score {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
